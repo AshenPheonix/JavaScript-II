@@ -81,8 +81,19 @@ console.log(ticketPriceTotal);
 // ==== Challenge 5: Be Creative ====
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
-// Problem 1
+// Problem 1: Podcat has decided to withdraw their donations due to bankruptcy. How much money remains after this?
+let newTickets=runners.filter(item=>item.company_name!='Podcat').reduce((total,item)=>total+item.donation,0)
+console.log(newTickets)
 
-// Problem 2
+// Problem 2: Maximum donation has been reduced to $100 for tax reasons. Please update the array.
+let newRunners=runners.map(item=>{
+    let temp=item
+    if(item.donation>100)
+        temp.donation=100
+    return temp
+})
+console.log(newRunners)
 
-// Problem 3
+// Problem 3: How much money is still being made?
+let newMoney=newRunners.reduce((total,item)=>total+item.donation,0)
+console.log(newMoney)
