@@ -4,9 +4,9 @@
 const outside="I'm Outside"
 function holder(){
   const whereAmI=outside;
-  console.log(whereAmI)
+  return whereAmI
 }
-holder()
+console.log(holder())
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
