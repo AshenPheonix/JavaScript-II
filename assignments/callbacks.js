@@ -24,23 +24,21 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
 */
 
-const testArray=[
-  1,2,3,4,5,6,7,8,9,10,11,12,13,4,8,5,1,3,6,10
-]
+
 
 function getLength(arr, cb) {
   // getLength passes the length of the array into the callback.
   cb(arr.length)
 }
 
-getLength(testArray,console.log)
+getLength(items,console.log)
 
 function last(arr, cb) {
   // last passes the last item of the array into the callback.
   cb(arr[arr.length-1])
 }
 
-last(testArray,console.log)
+last(items,console.log)
 
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
@@ -62,8 +60,8 @@ function contains(item, list, cb) {
   cb(list.includes(item))
 }
 
-contains(5,testArray,console.log)
-contains(20,testArray,console.log)
+contains('yo-yo',items,console.log)
+contains(20,items,console.log)
 
 
 /* STRETCH PROBLEM */
@@ -75,4 +73,4 @@ function removeDuplicates(array, cb) {
   cb([...new Set(array)])
 }
 
-removeDuplicates(testArray,console.log)
+removeDuplicates(items,console.log)

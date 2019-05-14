@@ -3,7 +3,7 @@
 
 const outside="I'm Outside"
 function holder(){
-  const whereAmI=outside;
+  const whereAmI="I'm inside";
   return whereAmI
 }
 console.log(holder())
